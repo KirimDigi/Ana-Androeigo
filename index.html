@@ -529,6 +529,38 @@
                                     <li class="satumomen_slide">
                                         <div class="container-mobile "
                                             style="background-image: url(themes/midnight-blue/bg.webp); ;">
+                                            <div class="h-100 d-flex justify-content-center flex-column align-items-center px-4"
+                                                style="">
+                                                <div class="editable text-center font-latin color-accent h4 mb-4 animate__animated animate__fadeInDown animate__slower"
+                                                    style="font-size: 28.8px;">Wedding Gift</div>
+                                                <div class="editable text-center font-italic mb-4 animate__animated animate__fadeInUp animate__slow"
+                                                    style="font-size: 14px; opacity: 0.8;">
+                                                    Doa restu Anda merupakan hadiah terindah bagi kami. Namun apabila Anda ingin memberikan tanda kasih, Anda dapat mengirimkannya melalui rekening di bawah ini:
+                                                </div>
+                                                
+                                                <div class="w-100 animate__animated animate__fadeInUp animate__slower">
+                                                    <!-- Bank Card 1 -->
+                                                    <div class="text-center p-3 mb-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; backdrop-filter: blur(10px);">
+                                                        <img src="bca.png" alt="BCA" style="height: 30px; object-fit: contain; margin-bottom: 8px;">
+                                                        <div style="font-size: 16px; font-weight: bold; color: var(--inv-accent); letter-spacing: 1px;">0601395541</div>
+                                                        <div style="font-size: 14px; font-style: italic; margin-bottom: 10px;">a.n Tri Rohana</div>
+                                                        <button class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="copyToClipboard('0601395541', this)" style="font-size: 12px; color: var(--inv-accent); border-color: var(--inv-accent); background-color: transparent;">Salin Rekening</button>
+                                                    </div>
+
+                                                    <!-- Bank Card 2 -->
+                                                    <div class="text-center p-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; backdrop-filter: blur(10px);">
+                                                        <img src="bca.png" alt="BCA" style="height: 30px; object-fit: contain; margin-bottom: 8px;">
+                                                        <div style="font-size: 16px; font-weight: bold; color: var(--inv-accent); letter-spacing: 1px;">1260872288</div>
+                                                        <div style="font-size: 14px; font-style: italic; margin-bottom: 10px;">a.n Androeigo Mardhotilla</div>
+                                                        <button class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="copyToClipboard('1260872288', this)" style="font-size: 12px; color: var(--inv-accent); border-color: var(--inv-accent); background-color: transparent;">Salin Rekening</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="satumomen_slide">
+                                        <div class="container-mobile "
+                                            style="background-image: url(themes/midnight-blue/bg.webp); ;">
 
                                             <div
                                                 class="watermark h-100 d-flex justify-content-center align-items-center">
@@ -618,6 +650,12 @@
                                     </svg>
                                     <span>Story</span>
                                 </li>
+                                <li class="satumomen_menu_item">
+                                     <svg width="24" height="24" fill="none" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                                         <path d="M216,72H180.92c-.11-.25-.23-.5-.36-.75A38,38,0,0,0,148,54a37.86,37.86,0,0,0-20,5.74A37.86,37.86,0,0,0,108,54a38,38,0,0,0-32.56,17.25c-.13.25-.25.5-.36.75H40A16,16,0,0,0,24,88v32a16,16,0,0,0,16,16h8v88a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V136h8a16,16,0,0,0,16-16V88A16,16,0,0,0,216,72ZM148,70a22,22,0,0,1,22,22c0,12.13-9.87,22-22,22s-22-9.87-22-22A22,22,0,0,1,148,70ZM86,92a22,22,0,0,1,22-22,22,22,0,0,1,22,22c0,12.13-9.87,22-22,22S86,104.13,86,92ZM40,88H120v32H40Zm24,48h56v88H64Zm128,88H136V136h56Zm8-104H136V88h80Z" fill="currentColor"></path>
+                                     </svg>
+                                     <span>Gift</span>
+                                 </li>
                                 <li class="satumomen_menu_item">
                                     <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path opacity=".4"
@@ -894,6 +932,26 @@
                 }
             }
         })();
+
+        function copyToClipboard(text, btn) {
+            var tempInput = document.createElement("input");
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            
+            var originalText = btn.innerHTML;
+            btn.innerHTML = "Tersalin! ✓";
+            btn.style.backgroundColor = "var(--inv-accent)";
+            btn.style.color = "#fff";
+            setTimeout(function() {
+                btn.innerHTML = originalText;
+                btn.style.backgroundColor = "transparent";
+                btn.style.color = "var(--inv-accent)";
+            }, 2000);
+        }
     </script>
 
     <script>
